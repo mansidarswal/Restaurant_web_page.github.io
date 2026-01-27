@@ -1,0 +1,247 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dil Se Dine</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style1.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header-bar">
+    <div class="header-content">
+        <img src="D.png" alt="Dil Se Dine Logo" class="logo">
+        <div class="header-text">
+            <h1>Dil Se Dine</h1>
+            <p>Crafting memories , one plate at a time</p>
+        </div>
+    </div>
+</header>
+
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#admin" onclick="show_admin_login()">Admin Login</a></li>
+
+
+
+    </ul>
+</nav>
+
+<button id="toggle-theme">🌙</button>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="hero">
+    <div class="hero-overlay">
+        <h2>Welcome to Dil Se Dine</h2>
+        <p>Fresh ingredients • Authentic taste • Warm hospitality</p>
+        <div class="hero-buttons">
+            <button onclick="openReservation()">Reserve a Table</button>
+            <button class="outline" onclick="scrollToMenu()">View Menu</button>
+        </div>
+    </div>
+</section>
+
+<main>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="style1" id="about">
+        <div class="about-container">
+
+            <div class="about-text">
+                <h2>Our Story</h2>
+                <p>
+                    Dil Se Dine began its journey in 1980 as a small family kitchen, where recipes were passed down through generations and every meal was cooked with heart.
+                    <br><br>
+                    Today, Dil Se Dine continues that legacy, bringing you carefully crafted dishes made with love, time-honored techniques, and the same passion that started it all.
+                </p>
+            </div>
+
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1631760641047-66d8ccda2b2c?q=80&w=400" alt="Our Story">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="style1" id="admin" style="display:none;">
+
+    <h2>Admin Login</h2>
+
+        <form id="admin-form">
+            <input type="text" id="input_user" placeholder="Username" required>
+            <input type="password" id="input_pass" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <section class="style1" id="user-responses" style="display:none;">
+        <h2>User Messages</h2>
+        <div id="user-messages"></div>
+    </section>
+
+    <section class="style1" id="admin-reservations" style="display:none;">
+        <h2>Table Reservations</h2>
+        <div id="reservation-list"></div>
+    </section>
+
+
+    <!-- ================= MENU ================= -->
+    <section class="style1" id="menu">
+        <h2>Menu</h2>
+
+        <h3>Veg Curries 🟢</h3>
+        <div class="menu-grid">
+            <div class="menu-card"><h4>Rajma Chawal</h4><p>Slow-cooked kidney bean curry with rice</p></div>
+            <div class="menu-card"><h4>Shahi Paneer</h4><p>Cashew gravy with soft paneer</p></div>
+            <div class="menu-card"><h4>Dal Tadka</h4><p>Yellow lentils tempered with spices</p></div>
+            <div class="menu-card"><h4>Nadroo Curry</h4><p>Lotus stem in aromatic gravy</p></div>
+
+        </div>
+<br>
+        <h3>Veg Rice 🟢</h3>
+        <div class="menu-grid">
+            <div class="menu-card"><h4>Veg Biryani</h4><p>Fragrant basmati rice</p></div>
+            <div class="menu-card"><h4>Veg Fried Rice</h4><p>Indo-Chinese style</p></div>
+            <div class="menu-card"><h4>Jeera Rice</h4><p>Cumin-flavored rice</p></div>
+        </div>
+<br>
+        <h3>Non-Veg Curries 🔴</h3>
+        <div class="menu-grid">
+            <div class="menu-card"><h4>Butter Chicken</h4><p>Classic creamy gravy</p></div>
+            <div class="menu-card"><h4>Yakhni</h4><p>Kashmiri yogurt curry</p></div>
+            <div class="menu-card"><h4>Rogan Josh</h4><p>Slow-cooked mutton</p></div>
+            <div class="menu-card"><h4>Chicken Korma</h4><p>Mild cashew curry</p></div>
+        </div>
+        <br>
+        <h3>Non-Veg Rice 🔴</h3>
+        <div class="menu-grid">
+            <div class="menu-card"><h4>Chicken Biryani</h4><p>Fragrant basmati rice with spices</p></div>
+            <div class="menu-card"><h4>Mutton Biryani</h4><p>Slow-cooked rice with tender mutton</p></div>
+            <div class="menu-card"><h4>Chicken Fried Rice</h4><p>Wok-tossed rice with chicken & veggies</p></div>
+        </div>
+        <br>
+        <h3>Indian Breads 🟤</h3>
+        <div class="menu-grid">
+            <div class="menu-card"><h4>Butter Naan</h4><p>Soft naan brushed with butter</p></div>
+            <div class="menu-card"><h4>Tandoori Roti</h4><p>Whole wheat bread from tandoor</p></div>
+            <div class="menu-card"><h4>Lachha Paratha</h4><p>Layered and crispy flatbread</p></div>
+        </div>
+        <br>
+        <h3>Desserts 🍯</h3>
+        <div class="menu-grid">
+            <div class="menu-card"><h4>Gulab Jamun</h4><p>Soft milk dumplings in sugar syrup</p></div>
+            <div class="menu-card"><h4>Rasmalai</h4><p>Creamy cottage cheese in saffron milk</p></div>
+            <div class="menu-card"><h4>Gajar Halwa</h4><p>Slow-cooked carrot dessert</p></div>
+            <div class="menu-card"><h4>Phirni</h4><p>Chilled rice pudding with nuts</p></div>
+        </div>
+    </section>
+
+    <!-- ================= GALLERY ================= -->
+    <section class="style1" id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1667403206492-a7fc384d46a6?q=80&w=400" onclick="openImage(this.src)">
+            <img src="https://images.unsplash.com/photo-1734504274508-7081590dcf58?q=80&w=400" onclick="openImage(this.src)">
+            <img src="https://images.unsplash.com/photo-1728910107534-e04e261768ae?q=80&w=400" onclick="openImage(this.src)">
+            <img src="https://images.unsplash.com/photo-1559561724-732dbca7be1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njk1MDkxMDh8&ixlib=rb-4.1.0&q=80&w=400"
+                 onclick="openImage(this.src)">
+
+            <img src="https://images.unsplash.com/photo-1710091691780-c7eb0dc50cf8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njk1MDkxMDh8&ixlib=rb-4.1.0&q=80&w=400"
+                 onclick="openImage(this.src)">
+
+            <img src="https://images.unsplash.com/photo-1716273474353-9439d26b1d5f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njk1MDk1NDB8&ixlib=rb-4.1.0&q=80&w=400"
+                 onclick="openImage(this.src)">
+
+            <img src="https://images.unsplash.com/photo-1627442433449-317a17fb6211?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njk1MDkyMzZ8&ixlib=rb-4.1.0&q=80&w=400"
+                 onclick="openImage(this.src)">
+
+            <img src="https://images.unsplash.com/photo-1616429266392-63ba6f1570a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njk1MDkzMjR8&ixlib=rb-4.1.0&q=80&w=400"
+                 onclick="openImage(this.src)">
+
+            <img src="https://images.unsplash.com/photo-1639744093694-4225490cf1d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njk1MDk0MzJ8&ixlib=rb-4.1.0&q=80&w=400"
+                 onclick="openImage(this.src)">
+
+            <img src="https://images.unsplash.com/photo-1524239077444-27413e763bba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njk1MDk5NDR8&ixlib=rb-4.1.0&q=80&w=400"
+                 onclick="openImage(this.src)">
+
+        </div>
+    </section>
+
+    <div id="image-modal">
+        <span class="nav prev" onclick="prevImage()">&#10094;</span>
+        <img id="modal-img">
+        <span class="nav next" onclick="nextImage()">&#10095;</span>
+        <span class="close" onclick="closeImage()">✕</span>
+    </div>
+    <!-- ================= REVIEWS ================= -->
+    <section class="style1" id="reviews">
+        <h2>Customer Reviews</h2>
+        <div class="review-box"><p>"Amazing food and lovely ambience!"</p><strong>– Ananya</strong></div>
+        <div class="review-box"><p>"Best biryani I’ve had in years."</p><strong>– Ramesh</strong></div>
+        <div class="review-box"><p>"Perfect place for family dinners."</p><strong>– Suresh</strong></div>
+    </section>
+
+    <!-- ================= RESERVATION ================= -->
+    <section class="style1" id="reservation" style="display:none;">
+        <h2>Reserve a Table</h2>
+
+        <form id="reservation-form">
+            <input type="text" id="res_name" placeholder="Your Name" required>
+            <input type="date" id="res_date" required>
+            <input type="time" id="res_time" required>
+
+            <select id="res_guests" required>
+                <option value="">Number of Guests</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5+</option>
+            </select>
+
+            <button type="submit">Confirm Reservation</button>
+        </form>
+
+        <p id="reservation-confirm"></p>
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+    <section class="style1" id="contact">
+        <h2>Contact Us</h2>
+        <p>📍 Hyderabad, Telangana</p>
+        <p>📞 9876543210</p>
+        <p>✉ dilsedine@gmail.com</p>
+
+        <form id="contact-form">
+            <input type="text" id="input_name" placeholder="Your Name" required>
+            <input type="email" id="input_email" placeholder="Your Email" required>
+            <textarea id="input_msg" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <p id="confirm-response"></p>
+
+    </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p>Open Daily • 10 AM – 10 PM</p>
+    <p>© 2026 Dil Se Dine</p>
+</footer>
+
+<script src="Script.js"></script>
+</body>
+</html>
