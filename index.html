@@ -1,12 +1,15 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dil Se Dine</title>
+    <title>Dil Se Dine | Authentic Indian Cuisine</title>
 
+    <meta name="description" content="Dil Se Dine – Authentic Indian restaurant in Hyderabad serving traditional flavors with modern comfort.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Style1.css">
+    <link rel="stylesheet" href="css/custom.css">
+
 </head>
 
 <body>
@@ -14,7 +17,7 @@
 <!-- ================= HEADER ================= -->
 <header class="header-bar">
     <div class="header-content">
-        <img src="D.png" alt="Dil Se Dine Logo" class="logo">
+        <img src="assets/images/Logo.png" alt="Dil Se Dine Logo" class="logo">
         <div class="header-text">
             <h1>Dil Se Dine</h1>
             <p>Crafting memories , one plate at a time</p>
@@ -31,14 +34,14 @@
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="#admin" onclick="show_admin_login()">Admin Login</a></li>
+        <li><a href="javascript:void(0)" onclick="show_admin_login()">Admin Login</a></li>
 
 
 
     </ul>
 </nav>
 
-<button id="toggle-theme">🌙</button>
+<button id="toggle-theme" aria-label="Toggle dark mode">🌙</button>
 
 <!-- ================= HERO ================= -->
 <section id="home" class="hero">
@@ -68,7 +71,7 @@
             </div>
 
             <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1631760641047-66d8ccda2b2c?q=80&w=400" alt="Our Story">
+                <img src="assets/images/RestImg.jpg" alt="Inside Dil Se Dine restaurant">
             </div>
 
         </div>
@@ -99,51 +102,51 @@
     <!-- ================= MENU ================= -->
     <section class="style1" id="menu">
         <h2>Menu</h2>
-
+        <br>
         <h3>Veg Curries 🟢</h3>
         <div class="menu-grid">
-            <div class="menu-card"><h4>Rajma Chawal</h4><p>Slow-cooked kidney bean curry with rice</p></div>
-            <div class="menu-card"><h4>Shahi Paneer</h4><p>Cashew gravy with soft paneer</p></div>
-            <div class="menu-card"><h4>Dal Tadka</h4><p>Yellow lentils tempered with spices</p></div>
-            <div class="menu-card"><h4>Nadroo Curry</h4><p>Lotus stem in aromatic gravy</p></div>
+            <div class="menu-card"><h4>Rajma Chawal</h4><p>Slow-cooked kidney bean curry with rice</p><br><p>₹360</p></div>
+            <div class="menu-card"><h4>Shahi Paneer</h4><p>Cashew gravy with soft paneer</p><br><p>₹320</p></div>
+            <div class="menu-card"><h4>Dal Tadka</h4><p>Yellow lentils tempered with spices</p><br><p>₹260</p></div>
+            <div class="menu-card"><h4>Nadroo Curry</h4><p>Lotus stem in aromatic gravy</p><br><p>₹360</p></div>
 
         </div>
 <br>
         <h3>Veg Rice 🟢</h3>
         <div class="menu-grid">
-            <div class="menu-card"><h4>Veg Biryani</h4><p>Fragrant basmati rice</p></div>
-            <div class="menu-card"><h4>Veg Fried Rice</h4><p>Indo-Chinese style</p></div>
-            <div class="menu-card"><h4>Jeera Rice</h4><p>Cumin-flavored rice</p></div>
+            <div class="menu-card"><h4>Veg Biryani</h4><p>Fragrant basmati rice</p><br><p>₹310</p></div>
+            <div class="menu-card"><h4>Veg Fried Rice</h4><p>Indo-Chinese style</p><br><p>₹180</p></div>
+            <div class="menu-card"><h4>Jeera Rice</h4><p>Cumin-flavored rice</p><br><p>₹120</p></div>
         </div>
 <br>
         <h3>Non-Veg Curries 🔴</h3>
         <div class="menu-grid">
-            <div class="menu-card"><h4>Butter Chicken</h4><p>Classic creamy gravy</p></div>
-            <div class="menu-card"><h4>Yakhni</h4><p>Kashmiri yogurt curry</p></div>
-            <div class="menu-card"><h4>Rogan Josh</h4><p>Slow-cooked mutton</p></div>
-            <div class="menu-card"><h4>Chicken Korma</h4><p>Mild cashew curry</p></div>
+            <div class="menu-card"><h4>Butter Chicken</h4><p>Classic creamy gravy</p><br><p>₹360</p></div>
+            <div class="menu-card"><h4>Yakhni</h4><p>Kashmiri yogurt curry</p><br><p>₹330</p></div>
+            <div class="menu-card"><h4>Rogan Josh</h4><p>Slow-cooked mutton</p><br><p>₹370</p></div>
+            <div class="menu-card"><h4>Chicken Korma</h4><p>Mild cashew curry</p><br><p>₹340</p></div>
         </div>
         <br>
         <h3>Non-Veg Rice 🔴</h3>
         <div class="menu-grid">
-            <div class="menu-card"><h4>Chicken Biryani</h4><p>Fragrant basmati rice with spices</p></div>
-            <div class="menu-card"><h4>Mutton Biryani</h4><p>Slow-cooked rice with tender mutton</p></div>
-            <div class="menu-card"><h4>Chicken Fried Rice</h4><p>Wok-tossed rice with chicken & veggies</p></div>
+            <div class="menu-card"><h4>Chicken Biryani</h4><p>Fragrant basmati rice with spices</p><br><p>₹300</p></div>
+            <div class="menu-card"><h4>Mutton Biryani</h4><p>Slow-cooked rice with tender mutton</p><br><p>₹340</p></div>
+            <div class="menu-card"><h4>Chicken Fried Rice</h4><p>Wok-tossed rice with chicken & veggies</p><br><p>₹280</p></div>
         </div>
         <br>
         <h3>Indian Breads 🟤</h3>
         <div class="menu-grid">
-            <div class="menu-card"><h4>Butter Naan</h4><p>Soft naan brushed with butter</p></div>
-            <div class="menu-card"><h4>Tandoori Roti</h4><p>Whole wheat bread from tandoor</p></div>
-            <div class="menu-card"><h4>Lachha Paratha</h4><p>Layered and crispy flatbread</p></div>
+            <div class="menu-card"><h4>Butter Naan</h4><p>Soft naan brushed with butter</p><br><p>₹45</p></div>
+            <div class="menu-card"><h4>Tandoori Roti</h4><p>Whole wheat bread from tandoor</p><br><p>₹30</p></div>
+            <div class="menu-card"><h4>Lachha Paratha</h4><p>Layered and crispy flatbread</p><br><p>₹40</p></div>
         </div>
         <br>
         <h3>Desserts 🍯</h3>
         <div class="menu-grid">
-            <div class="menu-card"><h4>Gulab Jamun</h4><p>Soft milk dumplings in sugar syrup</p></div>
-            <div class="menu-card"><h4>Rasmalai</h4><p>Creamy cottage cheese in saffron milk</p></div>
-            <div class="menu-card"><h4>Gajar Halwa</h4><p>Slow-cooked carrot dessert</p></div>
-            <div class="menu-card"><h4>Phirni</h4><p>Chilled rice pudding with nuts</p></div>
+            <div class="menu-card"><h4>Gulab Jamun</h4><p>Soft milk dumplings in sugar syrup</p><br><p>₹40</p></div>
+            <div class="menu-card"><h4>Rasmalai</h4><p>Creamy cottage cheese in saffron milk</p><br><p>₹35</p></div>
+            <div class="menu-card"><h4>Gajar Halwa</h4><p>Slow-cooked carrot dessert</p><br><p>₹55</p></div>
+            <div class="menu-card"><h4>Phirni</h4><p>Chilled rice pudding with nuts</p><br><p>₹50</p></div>
         </div>
     </section>
 
@@ -180,17 +183,39 @@
 
     <div id="image-modal">
         <span class="nav prev" onclick="prevImage()">&#10094;</span>
-        <img id="modal-img">
+        <img id="modal-img" alt="Gallery preview">
         <span class="nav next" onclick="nextImage()">&#10095;</span>
         <span class="close" onclick="closeImage()">✕</span>
     </div>
     <!-- ================= REVIEWS ================= -->
     <section class="style1" id="reviews">
         <h2>Customer Reviews</h2>
-        <div class="review-box"><p>"Amazing food and lovely ambience!"</p><strong>– Ananya</strong></div>
-        <div class="review-box"><p>"Best biryani I’ve had in years."</p><strong>– Ramesh</strong></div>
-        <div class="review-box"><p>"Perfect place for family dinners."</p><strong>– Suresh</strong></div>
+
+        <div class="review-carousel">
+            <div class="review-box active">
+                <p>"Amazing food and lovely ambience!"</p>
+                <strong>– Ananya</strong>
+            </div>
+
+            <div class="review-box">
+                <p>"Best biryani I’ve had in years."</p>
+                <strong>– Ramesh</strong>
+            </div>
+
+            <div class="review-box">
+                <p>"Perfect place for family dinners."</p>
+                <strong>– Suresh</strong>
+            </div>
+        </div>
+
+        <div class="review-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
     </section>
+
+
 
     <!-- ================= RESERVATION ================= -->
     <section class="style1" id="reservation" style="display:none;">
@@ -224,6 +249,7 @@
         <p>📞 9876543210</p>
         <p>✉ dilsedine@gmail.com</p>
 
+
         <form id="contact-form">
             <input type="text" id="input_name" placeholder="Your Name" required>
             <input type="email" id="input_email" placeholder="Your Email" required>
@@ -234,14 +260,32 @@
         <p id="confirm-response"></p>
 
     </section>
+    <section class="style1" id="location">
+        <h2>Find Us</h2>
+
+        <iframe
+                src="https://www.google.com/maps?q=Hyderabad&output=embed"
+                width="100%"
+                height="300"
+                style="border:0; border-radius:12px;"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
 </main>
 
 <!-- ================= FOOTER ================= -->
 <footer>
     <p>Open Daily • 10 AM – 10 PM</p>
     <p>© 2026 Dil Se Dine</p>
-</footer>
 
-<script src="Script.js"></script>
+    <!-- Social Media -->
+    <div class="social-links">
+        <a href="https://www.instagram.com" target="_blank">🅾𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦 </a>
+
+    </div>
+</footer>
+<script src="js/main.js"></script>
 </body>
 </html>

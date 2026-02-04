@@ -24,6 +24,30 @@ if (toggleBtn) {
 }
 
 
+/* ================= NAVBAR ACTIVE LINK ================= */
+
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll("nav ul li a");
+
+window.addEventListener("scroll", () => {
+  let currentSection = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 120;
+    if (window.scrollY >= sectionTop) {
+      currentSection = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${currentSection}`) {
+      link.classList.add("active");
+    }
+  });
+});
+
+
 /* ================= GALLERY MODAL ================= */
 
 let images = document.querySelectorAll(".gallery-grid img");
@@ -83,7 +107,6 @@ if (adminForm) {
     let username = document.getElementById("input_user").value.trim();
     let password = document.getElementById("input_pass").value.trim();
 
-    // Admin credentials
     let storedUsername = "Mansi";
     let storedPassword = "SRK123";
 
@@ -117,6 +140,21 @@ if (contactForm) {
       message: document.getElementById("input_msg").value.trim(),
       date: new Date().toLocaleString()
     };
+
+    if (response.name.length < 3) {
+      alert("Name must be at least 3 characters");
+      return;
+    }
+
+    if (!response.email.includes("@")) {
+      alert("Please enter a valid email");
+      return;
+    }
+
+    if (response.message.length < 10) {
+      alert("Message must be at least 10 characters");
+      return;
+    }
 
     let db = JSON.parse(localStorage.getItem("tempDB")) || [];
     db.push(response);
@@ -170,6 +208,15 @@ if (reservationForm) {
     let reservations =
       JSON.parse(localStorage.getItem("reservationsDB")) || [];
 
+    let alreadyBooked = reservations.some(r =>
+      r.date === reservation.date && r.time === reservation.time
+    );
+
+    if (alreadyBooked) {
+      alert("This slot is already booked. Please choose another.");
+      return;
+    }
+
     reservations.push(reservation);
     localStorage.setItem("reservationsDB", JSON.stringify(reservations));
 
@@ -202,3 +249,36 @@ function fetchReservations() {
     container.appendChild(div);
   });
 }
+
+
+/* ================= REVIEW CAROUSEL ================= */
+/* ✅ ONLY ADDED SAFETY + STRUCTURE, LOGIC SAME */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  let reviewIndex = 0;
+  let reviews = document.querySelectorAll(".review-carousel .review-box");
+  let dots = document.querySelectorAll(".review-dots .dot");
+
+  function showReview(index){
+    reviews.forEach((review, i) => {
+      review.classList.remove("active");
+      dots[i].classList.remove("active");
+
+      if(i === index){
+        review.classList.add("active");
+        dots[i].classList.add("active");
+      }
+    });
+  }
+
+  if (reviews.length > 0) {
+    setInterval(() => {
+      reviewIndex = (reviewIndex + 1) % reviews.length;
+      showReview(reviewIndex);
+    }, 3000);
+  }
+
+});
+
+
